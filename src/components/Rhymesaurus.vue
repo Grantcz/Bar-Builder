@@ -1,6 +1,8 @@
 <template>
   <div class="rhymesaurus">
-    <p>A Rhyming Thesaurus Built for the Local Struggle Rapper.</p>
+    <p>
+      <router-link v-bind:to="{ name: 'Rhymesaurus' }">Rhymesaurus</router-link>
+    </p>
     <form v-on:submit.prevent="findWords">
       <p>Find rhymes for <input type="text" v-model="rhyme"> related to <input type="text" v-model="phrase"> <button type="submit">Search</button></p>
     </form>
@@ -43,11 +45,7 @@ export default {
         params: {
           ml: this.phrase,
           rel_rhy: this.rhyme 
-        },
-        headers:{
-          'Accept': 'application/json',
-          'Content-Type': 'application/json',
-        } 
+        }
       })
       .then( response => {
         this.results = response.data;
@@ -69,19 +67,19 @@ input[type="text"]{
   border-top: none;
   border-left: none;
   border-right: none;
-  border-bottom: 1px solid #000000;
+  border-bottom: 1px solid #333;
   width: 300px;
   font-size: 1.4rem;
-  color: #000000;
+  color: #2c3e50;
   font-weight: 300;
   background: rgba(0,0,0,0.02);
   padding: 0.5rem;
 }
 button{
-  background: #000000;
+  background: #333;
   padding: 0.5rem;
   font-weight: 300;
-  color: #cecece;
+  color: #fff;
   border: none;
   cursor: pointer;
   font-size: 1.4rem;
@@ -98,12 +96,12 @@ ul.results {
 .results li {
   display: inline-block;
   margin: 10px;
-  border: solid 1px #000000;
+  border: solid 1px #333;
   padding: 0.5rem;
   width: 200px;
   min-height: 100px;
-  color: #000000;
-  background: #cecece;
+  color: #fff;
+  background: rgba(0,0,0,0.7);
 }
 ul.errors {
   list-style-type: none;
@@ -115,4 +113,7 @@ ul.errors {
   margin: 10px 0;
 }
 
+a {
+  color: #42b983;
+}
 </style>

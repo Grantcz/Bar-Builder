@@ -1,7 +1,7 @@
 {
-  "name": "rhymesaurus",
+  "name": "rhyme-builder",
   "version": "1.0.0",
-  "description": "Rhyme builder",
+  "description": "rhyme builder",
   "author": "Grant Cz",
   "private": true,
   "scripts": {
