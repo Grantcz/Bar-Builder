@@ -1,8 +1,8 @@
 {
-  "name": "Rhymesaurus",
+  "name": "rhymesaurus",
   "version": "1.0.0",
   "description": "Rhyme builder",
-  "author": "Grant Czernicki",
+  "author": "Grant Cz",
   "private": true,
   "scripts": {
     "dev": "node build/dev-server.js",
