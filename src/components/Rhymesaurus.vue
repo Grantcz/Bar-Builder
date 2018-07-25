@@ -111,7 +111,4 @@ ul.errors {
   margin: 10px 0;
 }
 
-a {
-  color: #45D1C2;
-}
 </style>
