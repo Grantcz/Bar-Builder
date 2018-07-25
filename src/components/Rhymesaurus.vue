@@ -43,7 +43,11 @@ export default {
         params: {
           ml: this.phrase,
           rel_rhy: this.rhyme 
-        }
+        },
+        headers:{
+          'Accept': 'application/json',
+          'Content-Type': 'application/json',
+        } 
       })
       .then( response => {
         this.results = response.data;
