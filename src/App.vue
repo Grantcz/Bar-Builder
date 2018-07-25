@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <h1>Rhymesaurus: Not a Dinosuar.</h1>
+    <h1>Rhymesaurus</h1>
     <router-view/>
   </div>
 </template>
