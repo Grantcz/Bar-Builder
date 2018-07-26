@@ -1,7 +1,8 @@
 <template>
   <div class="rhymesaurus">
     <p>
-      <router-link v-bind:to="{ name: 'Rhymesaurus' }">Rhymesaurus</router-link>
+      <router-link v-bind:to="{ name: 'Rhymesaurus' }"></router-link>
+      The Rhyming Thesaurus for the Local Stuggle Rappers.
     </p>
     <form v-on:submit.prevent="findWords">
       <p>Find rhymes for <input type="text" v-model="rhyme"> related to <input type="text" v-model="phrase"> <button type="submit">Search</button></p>
